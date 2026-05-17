@@ -18,16 +18,14 @@ For Travel and Hospitality, we adjusted the phrases to better focus on real oper
 
 | Industry             | Window Days | Candidate Count | Event Count | Estimated Cost |
 | -------------------- | ----------- | --------------- | ----------- | -------------- |
-| Financial Services   | 30          | ...             | ...         | ...            |
-| Financial Services   | 60          | ...             | ...         | ...            |
-| Financial Services   | 90          | ...             | ...         | ...            |
-| Financial Services   | 180         | ...             | ...         | ...            |
-| Financial Services   | 360         | ...             | ...         | ...            |
-| Travel & Hospitality | 30          | ...             | ...         | ...            |
-| Travel & Hospitality | 60          | ...             | ...         | ...            |
-| Travel & Hospitality | 90          | ...             | ...         | ...            |
-| Travel & Hospitality | 180         | ...             | ...         | ...            |
-| Travel & Hospitality | 360         | ...             | ...         | ...            |
+| Financial Services   | 30          | 0             | 2         | 0.5            |
+| Financial Services   | 30          | 0             | 2         | 0.5            |
+| Financial Services   | 60          | 0             | 3         | 0.5            |
+| Financial Services   | 90         | 0             | 3         | 0.5            |
+| Financial Services   | 180         | 0             | 6         | 0.5            |
+| Financial Services | 360          | 0             | 5         | 0.5            |
+| Travel & Hospitality | 360          | 1             | 1         | 0.5            |
+
 
 We tested different time windows such as 30, 60, 90, 180, and 360 days.
 
@@ -45,13 +43,4 @@ Overall, performance was decent, but not perfect, because financial filings ofte
 
 6.5 Limitations
 
-The first limitation was that some tickers couldn't find from EDGAR search results. 
-There is a trade-off between using strict filtering and relaxed filerting. 
-We don't want to remove relevant filings nor put unrelated filings into the pipe line. 
-
-The second limitation was the API cost constraint. 
-Since we need to repeatly run and process a large number of filings. We have to be carefully on the runtime within the budget. 
-
-The third limitation was stage 3 classification in which it didn't correctly identify office relocations. 
-
-The final limitation was the map didn't fully show all marker activies in both industries. The public SEC filings sometimes have certain companies avaible.
+The first limitation was that some tickers couldn't find from EDGAR search results. There is a trade-off between using strict filtering and relaxed filerting. We don't want to remove relevant filings nor put unrelated filings into the pipeline. The second limitation was the API cost constraint. Since we need to repeatly run and process a large number of filings. We have to be carefully on the runtime within the budget. The third limitation was stage 3 classification in which it didn't correctly identify office relocations. The final limitation was the map didn't fully show all marker activies in both industries. The public SEC filings sometimes have certain companies available.
